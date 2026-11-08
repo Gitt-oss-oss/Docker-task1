@@ -24,7 +24,4 @@ jobs:
         with:
           working-directory: ./.github/tests
       - name: Final Step
-        env:
-          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: |
-          gh repo edit $GITHUB_REPOSITORY --visibility private --accept-visibility-change-consequences
+        run: echo 'Success'
